@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'galeana-compressed';
+    src: url('galeana-compressed.otf') format('opentype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+.arrow {
+    position: fixed;
+    top: -20px;
+    left: -300px;
+    z-index: 1000; 
+    transform: scale(0.2) scaleX(-1); 
+    transition: all 0.2s cubic-bezier(.92,.03,.59,.89);
+    background-color: transparent;
+    border: none;
+    opacity: 0;
+    
+}
+
+.arrow:hover {
+transform: scale(0.20) translate(15%) scaleX(-1); 
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling during animations */
+}
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background-color: #f3eed4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.green-div {
+    position: absolute; /* Start at full screen */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #7a4419;
+    z-index: 999; /* Ensure it's on top initially */
+    transition: all 1s cubic-bezier(.69,.06,.32,.92);
+    align-self: self-start;
+}
+
+.green-div-small {
+    height: 600px;
+    width: 600px;
+    top: auto; /* Reset position */
+    left: auto; /* Reset position */
+    position: relative;
+    z-index: 10;
+}
+
+.about-text {
+    background-color: transparent;
+    height: 100vh;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transform: translateY(120%);
+    opacity: 0.05;
+    transition: none;
+}
+
+.about-header {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: galeana-compressed;
+    font-size: 60px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #695d51;
+}
+
+.about-para {
+    text-align: left;
+    width: 100%;
+    font-family: galeana-compressed;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #695d51;
+}
+
+.fly-in {
+    animation: flyUp 1.0s ease-in-out forwards;
+}
+
+@keyframes flyUp {
+    from {
+        transform: translateY(120%);
+        opacity: 0.05;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in{
+    animation: fadeIn 2.0s ease-in-out forwards;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

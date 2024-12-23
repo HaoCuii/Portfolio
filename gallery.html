@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style-gallery.css">
+</head>
+<body>
+    <!-- Carousel container -->
+    <div class="carousel-container">
+        <div class="mySlides about">
+            <h1 class="brown-sugar" id="carousel-text">
+                ABOUT
+            </h1>
+            <a href="about.html">
+                <button class="button" data-hover-color="#778468" id="shrink-button">
+                    <h3 class="button-text">
+                        SEE MORE
+                    </h3>
+                </button>
+            </a>
+        </div>
+
+        <div class="mySlides experience">
+            <h1 class="brown-sugar">
+                EXPERIENCE
+            </h1>
+            <a href="experience.html">
+                <button class="button" data-hover-color="#b26424">
+                    <h3 class="button-text">
+                        SEE MORE
+                    </h3>
+                </button>
+            </a>
+        </div>
+
+        <div class="mySlides projects">
+            <h1 class="brown-sugar">
+                PROJECTS
+            </h1>
+            <a href="projects.html">
+                <button class="button" data-hover-color="#79080c">
+                    <h3 class="button-text">
+                        SEE MORE
+                    </h3>
+                </button>
+            </a>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="dots-container" id="three-buttons">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- Script for the carousel -->
+    <script src="script-gallery.js"></script>
+
+</body>
+</html>
